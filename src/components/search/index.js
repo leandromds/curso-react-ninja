@@ -5,8 +5,8 @@ import style from './search.css'
 
 const Search = ({ isDisabled, handleSearch }) => (
   <div className={style.search}>
+    <h1>Search users in github</h1>
     <input
-      type='search'
       disabled={isDisabled}
       placeholder='Digite o nome do usuário no github'
       onKeyUp={handleSearch}

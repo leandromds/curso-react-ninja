@@ -1,15 +1,37 @@
-@charset 'utf-8'
+@charset 'utf-8';
 
-.repos-info li {
-  padding: 5px;
+.repos h2{
+  padding-left: 10px;
 }
 
-.repos li,
-.starred li {
-  padding: 10px 0;
+.repos li{
+  border-left: 5px solid #6C3EAA;
+  padding-left: 5px;
+  list-style: none;
+  margin-bottom: 5px;
 }
 
-.repos li + li,
-.starred li + li {
-  border-top: 1px solid #ccc;
+.repos ul{
+  padding-left: 10px;
 }
+
+.repos li:hover {
+  background-color: #6C3EAA;
+  border-left: 5px solid #442A9C;
+  color: #fff;
+}
+
+.repos li a{
+  color: #442A9C;
+  display: block;
+  padding: 5px 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+.repos li a:hover{
+  background-color: #6C3EAA;
+  color: #fff;
+}
+
+

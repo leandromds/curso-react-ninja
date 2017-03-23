@@ -5,7 +5,7 @@ const webpackConfig = require('@kadira/storybook/dist/server/config/defaults/web
 module.exports = function (config, env) {
   const newConfig = webpackConfig(config, env)
 
-  newConfig.module.preLoders = (newConfig.module.preLoders || []).concat({
+  newConfig.module.preLoaders = (newConfig.module.preLoaders || []).concat({
     test: /\.js$/,
     exclude: /node_modules/,
     loader: 'standard'

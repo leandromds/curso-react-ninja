@@ -1,14 +1,26 @@
-@charset 'utf-8'
+@charset 'utf-8';
 
 .actions {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 
 .actions button {
+  background-color: #6C3EAA;
+  border: none;
+  border-bottom: 3px solid #442A9C;
+  color: #fff;
+  cursor: pointer;
   font-size: 20px;
   font-weight: 700;
   height: 50px;
+  transition: background-color .5s, border-bottom .5s;
   text-transform: uppercase;
   width: 48%;
+}
+
+.actions button:hover {
+  background-color: #442A9C;
+  border-bottom: 3px solid #6C3EAA;
 }

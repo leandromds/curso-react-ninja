@@ -4,9 +4,12 @@ import React, { PropTypes } from 'react'
 import style from './actions.css'
 
 const Actions = ({ getRepos, getStarred }) => (
-  <div className={style.actions}>
-    <button onClick={getRepos}>ver repositórios</button>
-    <button onClick={getStarred}>ver favoritos</button>
+  <div>
+    <hr />
+    <div className={style.actions}>
+      <button onClick={getRepos}>ver repositórios</button>
+      <button onClick={getStarred}>ver favoritos</button>
+    </div>
   </div>
 )
 

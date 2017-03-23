@@ -7,12 +7,12 @@ const UserInfo = ({ userinfo }) => (
   <div className={style.userInfo}>
     <img src={userinfo.photo} alt='Minha imagem' />
 
-    <div>
-      <h1 className='title tile'>
+    <div className={style.userText}>
+      <h1>
         <a href={`https://github.com/${userinfo.login}`} target='_blank'>{userinfo.username}</a>
       </h1>
-      <div className='tile'>
-        <ul className='repos-info'>
+      <div className={style.reposInfo}>
+        <ul>
           <li> Repositórios: {userinfo.repos}</li>
           <li> Seguidores: {userinfo.followers}</li>
           <li> seguindo: {userinfo.following}</li>

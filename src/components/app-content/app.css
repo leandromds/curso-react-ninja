@@ -5,26 +5,53 @@
 }
 
 body {
+  background-color: #eee;
   font: 16px sans-serif;
   margin: 0;
   padding: 0;
 }
 
-.app {
-  float: left;
-  padding: 30px;
-  width: 100%;
+.infoContainer {
+  margin: 0 15%;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+hr {
+  margin: 20px 0 30px;
 }
 
-.actions,
-.repos,
-.starred {
-  float: left;
+.reposBoxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reposBoxes div {
+  width: 48%;
+}
+
+.loader {
+  background-color: #fff;
+  color: #6C3EAA;
+  text-align: center;
   width: 100%;
+  animation-name: loaderbox;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.loader p {
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+@keyframes loaderbox {
+  from {
+    background-color: #fff;
+    color: #6C3EAA;
+  }
+
+  to {
+    background-color: #6C3EAA;
+    color: #fff;
+  }
 }

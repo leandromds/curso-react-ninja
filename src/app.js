@@ -5,7 +5,7 @@ import ajax from '@fdaciuk/ajax'
 import AppContent from './components/app-content'
 
 class App extends Component {
-  constructor() {
+  constructor () {
     super()
     this.state = {
       userinfo: null,
@@ -17,20 +17,19 @@ class App extends Component {
     this.handleSearch = this.handleSearch.bind(this)
   }
 
-  getGitHubApiUrl(username, type) {
+  getGitHubApiUrl (username, type) {
     const internalUsername = username ? `/${username}` : ''
     const internalType = type ? `/${type}` : ''
     return `https://api.github.com/users${internalUsername}${internalType}`
   }
 
-  handleSearch(e) {
+  handleSearch (e) {
     const value = e.target.value
     const keyCode = e.which || e.keyCode
     const enterKey = 13
-    const target = e.target
 
-    if(keyCode === enterKey) {
-      this.setState({ isFetching: true})
+    if (keyCode === enterKey) {
+      this.setState({isFetching: true})
       ajax().get(this.getGitHubApiUrl(value))
         .then((result) => {
           this.setState({
@@ -40,34 +39,34 @@ class App extends Component {
               login: result.login,
               repos: result.public_repos,
               followers: result.followers,
-              following: result.following,
+              following: result.following
             },
             repos: [],
             starred: []
+          })
         })
-      })
       .always(() => {
         this.setState({ isFetching: false })
       })
     }
   }
 
-  getRepos(type) {
+  getRepos (type) {
     return (e) => {
       const username = this.state.userinfo.login
       ajax().get(this.getGitHubApiUrl(username, type))
       .then((result) => {
         this.setState({
           [type]: result.map((repo) => ({
-              name: repo.name,
-              link: repo.html_url
-            }))
-          })
+            name: repo.name,
+            link: repo.html_url
+          }))
         })
+      })
     }
   }
 
-  render() {
+  render () {
     return <AppContent
       {...this.state}
       handleSearch={this.handleSearch}
@@ -77,4 +76,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

@@ -26,7 +26,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new DashboardPlugin(),
-    new ExtractTextPlugin('[name]-[hash].css'),
+    new ExtractTextPlugin('[name].css'),
 
     new HtmlPlugin({
       title: 'Github app',
@@ -35,7 +35,7 @@ module.exports = {
   ],
 
   module: {
-    preLoader: [{
+    preLoaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
       include: /src/,

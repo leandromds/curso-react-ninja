@@ -38,7 +38,7 @@ module.exports = {
   ],
 
   module: {
-    preLoader: [{
+    preLoaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
       include: /src/,
