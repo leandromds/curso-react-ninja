@@ -11,5 +11,7 @@ module.exports = function (config, env) {
     loader: 'standard'
   })
 
+  // comentário
+
   return newConfig
 }
