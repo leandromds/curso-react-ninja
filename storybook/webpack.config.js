@@ -10,8 +10,5 @@ module.exports = function (config, env) {
     exclude: /node_modules/,
     loader: 'standard'
   })
-
-  // comentário
-
   return newConfig
 }
