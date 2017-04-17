@@ -6,7 +6,7 @@ import UserInfo from 'components/user-info'
 import Actions from 'components/actions'
 import Repos from 'components/repos'
 
-import style from './app.css'
+import './app.css'
 
 const AppContent = ({
   userinfo,
@@ -17,14 +17,14 @@ const AppContent = ({
   getRepos,
   getStarred
 }) => (
-  <div className={style.appContainer}>
+  <div className='appContainer'>
     <Search isDisabled={isFetching} handleSearch={handleSearch} />
-    <div className={style.infoContainer}>
-      {isFetching && <div className={style.loader}><p>carregando...</p></div>}
+    <div className='infoContainer'>
+      {isFetching && <div className='loader'><p>carregando...</p></div>}
       {!!userinfo && <UserInfo userinfo={userinfo} />}
       {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
 
-      <div className={style.reposBoxes}>
+      <div className='reposBoxes'>
         {!!repos.length &&
           <Repos
             title='Repositórios'

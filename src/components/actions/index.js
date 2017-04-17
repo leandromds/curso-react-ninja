@@ -1,12 +1,12 @@
 'use strict'
 
 import React, { PropTypes } from 'react'
-import style from './actions.css'
+import './actions.css'
 
 const Actions = ({ getRepos, getStarred }) => (
   <div>
     <hr />
-    <div className={style.actions}>
+    <div className='actions'>
       <button onClick={getRepos}>ver repositórios</button>
       <button onClick={getStarred}>ver favoritos</button>
     </div>

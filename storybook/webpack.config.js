@@ -11,5 +11,18 @@ module.exports = function (config, env) {
     loader: 'standard'
   })
 
+  // newConfig.module.loaders = (newConfig.module.loaders || []).concat({
+  //   test: /\.css$/,
+  //   exclude: /node_modules/,
+  //   // include: /src/,
+  //   loaders: ['style', 'css?modules']
+  // })
+
+  // newConfig.module.loaders.map((loader) => {
+  //   if (!loader.test) {
+  //     console.log(loader)
+  //   }
+  // })
+
   return newConfig
 }

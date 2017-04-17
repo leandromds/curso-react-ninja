@@ -1,10 +1,10 @@
 'use strict'
 
 import React, { PropTypes } from 'react'
-import style from './repos.css'
+import './repos.css'
 
 const Repos = ({ title, repos }) => (
-  <div className={style.repos}>
+  <div className='repos'>
     <h2>{title}:</h2>
     <ul>
       {repos.map((repo, index) => (
@@ -15,6 +15,11 @@ const Repos = ({ title, repos }) => (
     </ul>
   </div>
 )
+
+Repos.defaultProps = {
+  className: '',
+  repos: []
+}
 
 Repos.propTypes = {
   title: PropTypes.string.isRequired,
