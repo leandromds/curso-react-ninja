@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+.search {
+  background: #6C3EAA;
+  height: 260px;
+  margin-bottom: 20px;
+  padding: 75px 0px 0;
+  text-align: center;
+}
+
+.search h1 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.search input {
+  background-color: #fff;
+  border-color: #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  max-width: 400px;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+}

@@ -87,7 +87,6 @@ const config = {
   plugins: [
     criticalRenderingPath,
     cssModules,
-
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': '"production"'
