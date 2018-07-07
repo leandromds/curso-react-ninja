@@ -1,0 +1,53 @@
+{
+  "name": "workflow-react",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack --progress --config webpack.prod.config -p",
+    "start": "webpack-dashboard -- webpack-dev-server",
+    "test": "jest --coverage",
+    "test:watch": "yarn test -- --watch",
+    "lint": "standard --verbose | snazzy",
+    "lint:watch": "gulp",
+    "lint:fix": "standard --fix",
+    "storybook": "start-storybook -p 6006 -c storybook",
+    "build-storybook": "build-storybook -c storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.5",
+    "@storybook/addon-links": "^3.4.5",
+    "@storybook/addons": "^3.4.5",
+    "@storybook/react": "^3.4.5",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.2.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "cli": "^1.0.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "gulp": "^3.9.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jest-cli": "^23.2.0",
+    "react-hot-loader": "^4.1.2",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1",
+    "standard-loader": "^6.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^3.0.0",
+    "webpack-dashboard": "^2.0.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-router-dom": "^4.2.2"
+  }
+}
